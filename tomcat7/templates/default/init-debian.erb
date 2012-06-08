@@ -26,7 +26,7 @@
 
 set -e
 
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/tomcat/bin
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:<%= node[:tomcat7][:home] %>/bin
 NAME=tomcat7
 DESC="Tomcat servlet engine"
 DEFAULT=/etc/default/$NAME
