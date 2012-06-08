@@ -8,7 +8,7 @@
 #
 tc7ver = node["tomcat7"]["version"]
 tc7tarball = "apache-tomcat-#{tc7ver}.tar.gz"
-tc7url = "http://www.apache.org/dist/tomcat/tomcat-7/v#{tc7ver}/bin/#{tc7tarball}"
+tc7url = "http://archive.apache.org/dist/tomcat/tomcat-7/v#{tc7ver}/bin/#{tc7tarball}"
 tc7target = node["tomcat7"]["target"]
 tc7user = node["tomcat7"]["user"]
 tc7group = node["tomcat7"]["group"]
