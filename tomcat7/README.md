@@ -1,7 +1,7 @@
 Description
 ===========
 
-Installs and configures Tomcat.
+Installs and configures Tomcat 7.
 
 Requirements
 ============
@@ -23,10 +23,10 @@ Attributes
 * `node["tomcat7"]["ajp_port"]` - The network port used by Tomcat's AJP connector, default `8009`.
 * `node["tomcat7"]["java_options"]` - Extra options to pass to the JVM, default `-Xmx128M -Djava.awt.headless=true`.
 * `node["tomcat7"]["use_security_manager"]` - Run Tomcat under the Java Security Manager, default `false`.
-* `node["tomcat7"]["version"] - The Tomcat version, default `7.0.26`
-* `node["tomcat7"]["user"] - Tomcat user, default `tomcat`
-* `node["tomcat7"]["group"] - Tomcat group, default `tomcat`
-* `node["tomcat7"]["target"] - The target folder where tomcat is installed, default `/usr/share`
+* `node["tomcat7"]["version"] - The Tomcat version, default `7.0.27`.
+* `node["tomcat7"]["user"] - Tomcat user, default `tomcat`.
+* `node["tomcat7"]["group"] - Tomcat group, default `tomcat`.
+* `node["tomcat7"]["target"] - The target folder where tomcat is installed, default `/usr/share`.
 
 Usage
 =====

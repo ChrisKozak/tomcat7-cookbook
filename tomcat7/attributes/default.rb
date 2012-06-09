@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-default[:tomcat7][:version] = "7.0.26"
+default[:tomcat7][:version] = "7.0.27"
 default[:tomcat7][:user] = "tomcat"
 default[:tomcat7][:group] = "tomcat"
 default[:tomcat7][:target] = "/usr/share"
