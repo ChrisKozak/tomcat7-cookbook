@@ -6,6 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+include_recipe "java"
+
+
 tc7ver = node["tomcat7"]["version"]
 tc7tarball = "apache-tomcat-#{tc7ver}.tar.gz"
 tc7url = "http://archive.apache.org/dist/tomcat/tomcat-7/v#{tc7ver}/bin/#{tc7tarball}"
@@ -63,29 +67,29 @@ end
 case node["platform"]
 when "debian","ubuntu"
     template "/etc/init.d/tomcat7" do
-	source "init-debian.erb"
-	owner "root"
-	group "root"
-	mode "0755"
+		source "init-debian.erb"
+		owner "root"
+		group "root"
+		mode "0755"
     end
-    execute "init-deb" do
-	user "root"
-	group "root"
-	command "update-rc.d tomcat7 defaults"
-	action :run
+	execute "init-deb" do
+		user "root"
+		group "root"
+		command "update-rc.d tomcat7 defaults"
+		action :run
     end
 else
     template "/etc/init.d/tomcat7" do
-	source "init-rh.erb"
-	owner "root"
-	group "root"
-	mode "0755"
+		source "init-rh.erb"
+		owner "root"
+		group "root"
+		mode "0755"
     end
     execute "init-rh" do
-	user "root"
-	group "root"
-	command "chkconfig --add tomcat7"
-	action :run
+		user "root"
+		group "root"
+		command "chkconfig --add tomcat7"
+		action :run
     end
 end
 
