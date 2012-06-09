@@ -19,7 +19,7 @@
 default[:tomcat7][:version] = "7.0.26"
 default[:tomcat7][:user] = "tomcat"
 default[:tomcat7][:group] = "tomcat"
-default[:tomcat7][:target] = "/usr/local"
+default[:tomcat7][:target] = "/usr/share"
 default[:tomcat7][:port] = 8080
 default[:tomcat7][:ssl_port] = 8443
 default[:tomcat7][:ajp_port] = 8009
