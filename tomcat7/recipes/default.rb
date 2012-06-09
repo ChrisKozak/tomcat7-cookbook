@@ -17,11 +17,11 @@ tc7target = node["tomcat7"]["target"]
 tc7user = node["tomcat7"]["user"]
 tc7group = node["tomcat7"]["group"]
 
-# Get binary distro
+# Get the tomcat binary 
 remote_file "/tmp/#{tc7tarball}" do
     source "#{tc7url}"
     mode "0644"
-    checksum "00d310f2f4e15821951e9d206af45c6b"
+	action :create
 end
 
 # Create group
